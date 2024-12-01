@@ -36,21 +36,21 @@ jobs:
       uses: actions/cache@v3
       with:
         path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('server/package-lock.json') }}
+        key: ${{ runner.os }}-node-${{ hashFiles('./server/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
 
     # Navigate to the server directory and install dependencies
     - name: Install dependencies
-      working-directory: server
+      working-directory: ./server
       run: npm ci
 
     # Build the source code (if applicable)
     - name: Build project
-      working-directory: server
+      working-directory: ./server
       run: npm run build --if-present
 
     # Run tests
     - name: Run tests
-      working-directory: server
+      working-directory: ./server
       run: npm test -- --exit
