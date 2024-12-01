@@ -30,6 +30,15 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        
+    # Cache dependencies based on the 'package-lock.json' located in the 'server' directory
+    - name: Cache npm dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('server/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
 
     # Navigate to the server directory and install dependencies
     - name: Install dependencies
