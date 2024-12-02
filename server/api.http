@@ -1,0 +1,26 @@
+## TEST USER REGISTRATION 
+POST http://localhost:3010/register 
+Content-Type: application/json
+
+{
+  "username": "Nandi", 
+  "password": "Nandi1" 
+}
+
+## LOGIN USER 
+POST http://localhost:3010/login
+Content-Type: application/json
+
+{
+ "username": "Nandi", 
+ "password": "Nandi1" 
+}
+
+## TASKS BY USER
+
+GET http://localhost:3010/tasks/user
+Content-Type: application/json
+
+{
+    "id" : 2
+}

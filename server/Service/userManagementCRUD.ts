@@ -5,7 +5,9 @@ import {Tasks} from "./ITasks";
 import { IDatabase } from "pg-promise";
 
 export default class UserManagement implements UsersCrud{
-    constructor(private db: IDatabase<any>){}
+    constructor(private db: IDatabase<any>){
+        this.db = db;
+    }
   
     // function to register a user by ensuringg that the username and password are unuque
     async userRegistration(username: string , password : string): Promise<string>{

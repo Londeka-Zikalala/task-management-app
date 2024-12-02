@@ -81,7 +81,7 @@ describe('TaskManager class tests', function () {
             let task = yield taskManager.createTask(user.id, title, description, due_date, false);
             // delete task 
             let deleteTask = yield taskManager.deleteTask(task.title);
-            assert_1.default.equal(deleteTask, 'Task deleted!');
+            assert_1.default.equal(deleteTask, 'Task deleted');
         });
     });
 });

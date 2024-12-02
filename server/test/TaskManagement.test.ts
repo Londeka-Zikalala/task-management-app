@@ -81,7 +81,7 @@ describe('TaskManager class tests', function(){
 
         // delete task 
       let deleteTask =  await taskManager.deleteTask(task.title);
-            assert.equal(deleteTask, 'Task deleted!')
+            assert.equal(deleteTask, 'Task deleted')
         
     })
 })

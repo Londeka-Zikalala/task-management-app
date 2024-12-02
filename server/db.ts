@@ -11,7 +11,7 @@ if (process.env.DATABASE_URL && !local) {
     useSSL = true;
 }
 // which db connection to use
-const connectionString: string = process.env.DATABASE_URL || '';
+const connectionString: string = process.env.DATABASE_URL|| '';
 
 const db = pgp(connectionString);
 export default db;

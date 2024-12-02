@@ -17,6 +17,7 @@ const db_1 = __importDefault(require("../db"));
 class UserManagement {
     constructor(db) {
         this.db = db;
+        this.db = db;
     }
     // function to register a user by ensuringg that the username and password are unuque
     userRegistration(username, password) {

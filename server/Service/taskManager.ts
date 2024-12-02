@@ -22,7 +22,7 @@ export default class TaskManager implements TasksCrud {
 
 // Function tp update the task status to complete
 
-async updateTask(title:string):Promise<string>{
+async updateTask(title: string):Promise<string>{
     try{
         //Set the boolean to true
         await db.none(`UPDATE tasks SET status = true WHERE id = $1`,[title])
