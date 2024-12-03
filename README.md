@@ -9,11 +9,11 @@
 5. [File Structure](#Files)
 
 --- 
-## Introduction {#Introduction}
+## Introduction 
 This Task Management app was built using Node.js and TypeScript,and React. It allows users to create, update, and delete tasks in their respective accounts.
 
 ---
-## Prerequisites {#Prerequisites}
+## Prerequisites 
 
 ### Before starting, ensure you have the following installed:
 
@@ -21,7 +21,7 @@ This Task Management app was built using Node.js and TypeScript,and React. It al
 2. npm
 3. PostgreSQL (for database)
 --- 
-## Setup {#Setup}
+## Setup
 
 ### 1. git clone https://github.com/Londeka-Zikalala/task-management-app.git
  ### cd task-management-app
@@ -34,28 +34,28 @@ This Task Management app was built using Node.js and TypeScript,and React. It al
      - Add your PostgreSQL connection string to the `.env` file.
 
 --- 
-## Installation {#Installation}
+## Installation 
 
   ### 1. run npm install in each folder server and client
 
   ### 2. run npm test - if the tests are passing, everything is running smoothly and you're ready to go.
 
-  ### 3. run npx ts-node index.ts  to run the server
+  ### 3. run node server/index.js  to run the server
 
   ### 4. run npm start in the client folder to start the react app
 --- 
-## Usage {#Usage}
+## Usage 
 
 ### Task Management Routes
 - The app has key routes related to user-task management: 
 
-GET /tasks/user: Fetches tasks  to a belonging to the logged in user. 
+1. GET /tasks/user: Fetches tasks  to a belonging to the logged in user. 
 Authentication
-POST /users/register: Registers a new user
-POST /users/login: Logs in an existing user and provides a JWT token for authentication.
-POST /tasks/create: Creates a new task.
-POST /tasks/update: Updates a task's status to "completed". 
-POST /tasks/delete: Deletes a task. 
+2. POST /users/register: Registers a new user
+3. POST /users/login: Logs in an existing user and provides a JWT token for authentication.
+4. POST /tasks/create: Creates a new task.
+5. POST /tasks/update: Updates a task's status to "completed". 
+6.  /tasks/delete: Deletes a task.
 
 ### Example Usage : 
 
@@ -102,8 +102,8 @@ POST /tasks/delete: Deletes a task.
 ├── server
 │   ├── db.ts                        # Database connection setup
 │   ├── service/                      # Business logic for tasks and user management
-│   │   ├── TaskManager.ts           # Task management logic (CRUD operations)
-│   │   ├── UserManagement.ts        # User management logic
+│   │   ├── TaskManager.ts           # Task management logic (CRUD)
+│   │   ├── UserManagement.ts        # User management logic (CRUD)
 │   |   ├── routes/                      # Express routes
 │   │   |    ├── TaskManagementRoutes.ts  # Routes for task management
 │   │   |    ├── UserManagementRoutes.ts  # Routes for user management
